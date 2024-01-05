@@ -1,0 +1,49 @@
+Parameters for model:
+
+For each lane:
+
+1 - Number of vehicles currently stopped at traffic light.
+2 - Total number of vehicles.
+2 - Number of cars, buses, trucks, motorcycles, bicycles.
+4 - Mean speed of cars, buses, trucks, motorcycles, bicycles.
+5 - Mean distance from traffic light of cars, buses, trucks, motorcycles, bicycles.
+
+------------------------------------------------------------------------------------------------------
+
+Metrics for evaluating performance:
+
+For each lane:
+
+1 - Number of vehicles stopped at traffic light.
+2 - Sum of waiting times of all vehicles.
+2 - Carbon emissions released.
+
+
+------------------------------------------------------------------------------------------------------
+
+Hyperparameters:
+
+1 - Threshold for total number of stopped vehicles at the traffic light.
+2 - Threshold for difference of number of vehicles between opposite directions of traffic flow.
+3 - Threshold for difference of large vehicles between opposite directions of traffic flow.
+
+-----------------------------------------------------------------------------------------------------
+Note to self:
+
+1 - For any given lane, if a certain threshold for the number of vehicles currently stopped at the 
+traffic light has been surpassed, then change signal to green regardless of traffic at other lanes.
+
+2 - If the difference of total number of vehicles in two opposite directions of traffic flow is 
+greater than a certain threshold then change respective signals to green to allow traffic volume in 
+those lanes to reduce.
+
+3 - Store information about number of each type of vehicle at each lane. If the difference of number of 
+large vehicles in two opposite directions of traffic flow is greater than a certain threshold then 
+change signal to green for respective lanes to allow the direction with more large vehicles to pass
+through.
+
+4 - If multiple lanes consist of large vehicles within the difference threshold, then take the mean 
+speed and mean distance from traffic light of large vehicles into consideration before making a 
+decision.
+
+-----------------------------------------------------------------------------------------------------

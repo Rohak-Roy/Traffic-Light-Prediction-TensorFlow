@@ -1,0 +1,3 @@
+getNumOfPredictedVehicles(String edgeID, Integer time) returns a dictionary of type {"Time": integer_value, "Number": integer_value}.
+This states the number of vehicles on the given edge ID which are predicted to be at the traffic light after the given time.
+The time for predicted vehicles is a global variable called timeForPredictingVehAtTLS in the classes_and_methods.py folder and needs to be changed from there if required.
